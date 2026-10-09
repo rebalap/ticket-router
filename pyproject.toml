@@ -1,0 +1,43 @@
+[project]
+name = "ticket-router"
+version = "0.1.0"
+description = "Support ticket intent + urgency router: zero-shot BART vs fine-tuned DistilBERT, with cost-weighted evals"
+readme = "README.md"
+authors = [
+    { name = "Prahlad Rebala", email = "prahlad.rebala@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=0.33",
+    "datasets>=2.20",
+    "joblib>=1.6.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.65.0",
+    "tabulate>=0.10.0",
+    "torch>=2.14.1",
+    "transformers>=4.44",
+]
+
+[project.scripts]
+ticket-prepare = "ticket_router.data:main"
+ticket-train = "ticket_router.train:main"
+ticket-predict = "ticket_router.predict:main"
+ticket-eval = "ticket_router.evaluate:main"
+ticket-route = "ticket_router.router:main"
+ticket-demo = "ticket_router.demo:main"
+ticket-brief = "ticket_router.brief:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
