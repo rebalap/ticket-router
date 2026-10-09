@@ -3,6 +3,8 @@ name = "ticket-router"
 version = "0.1.0"
 description = "Support ticket intent + urgency router: zero-shot BART vs fine-tuned DistilBERT, with cost-weighted evals"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Prahlad Rebala", email = "prahlad.rebala@gmail.com" }
 ]

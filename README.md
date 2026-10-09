@@ -119,3 +119,6 @@ docs/                user journeys, model card, README images
 tests/               metrics, calibration, urgency, brief, hard set, Streamlit AppTest smoke tests
 .claude/             Claude Code settings, launch config, slash commands (/demo /eval /route /pm-brief)
 ```
+
+## License
+Code is released under the [MIT License](LICENSE). The Bitext dataset and the Hugging Face models (`facebook/bart-large-mnli`, `distilbert-base-uncased`) are under their own licenses. Check them before reusing the data or model weights.
